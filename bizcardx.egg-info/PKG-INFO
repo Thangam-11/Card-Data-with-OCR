@@ -1,0 +1,35 @@
+Metadata-Version: 2.4
+Name: bizcardx
+Version: 0.1.0
+Summary: A Streamlit app to extract and manage business card data using OCR.
+Home-page: https://github.com/Thangam-11/Card-Data-with-OCR
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Framework :: Streamlit
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: easyocr==1.7.0
+Requires-Dist: Pillow==9.5.0
+Requires-Dist: numpy==1.25.2
+Requires-Dist: pandas==2.1.0
+Requires-Dist: streamlit==1.26.0
+Requires-Dist: streamlit_option_menu==0.3.6
+Requires-Dist: psycopg2==2.9.7
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+conda create -n venv python=3.10 -y
+
+conda activate venv
+
+pip install -e .

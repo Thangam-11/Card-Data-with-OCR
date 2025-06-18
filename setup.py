@@ -8,12 +8,12 @@ setup(
     description="A Streamlit app to extract and manage business card data using OCR.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/bizcardx",  # Update this with your actual repo URL
+    url="https://github.com/Thangam-11/Card-Data-with-OCR",  # Update this with your actual repo URL
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
         "easyocr==1.7.0",
-        "Pillow==10.0.0",
+        "Pillow==9.5.0",
         "numpy==1.25.2",
         "pandas==2.1.0",
         "streamlit==1.26.0",

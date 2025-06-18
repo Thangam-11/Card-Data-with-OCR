@@ -1,0 +1,13 @@
+README.md
+setup.py
+app/__init__.py
+app/data_extraction.py
+app/database.py
+app/image_utils.py
+bizcardx.egg-info/PKG-INFO
+bizcardx.egg-info/SOURCES.txt
+bizcardx.egg-info/dependency_links.txt
+bizcardx.egg-info/requires.txt
+bizcardx.egg-info/top_level.txt
+config/__init__.py
+exception/__init__.py
