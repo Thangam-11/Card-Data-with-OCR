@@ -19,7 +19,7 @@ setup(
         "streamlit==1.26.0",
         "streamlit_option_menu==0.3.6",
         # Uncomment if you're using MongoDB or PostgreSQL
-        # "pymongo==4.5.0",
+        "pymongo==4.5.0",
         "psycopg2==2.9.7",
     ],
     classifiers=[
