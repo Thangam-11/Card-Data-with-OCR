@@ -1,11 +1,12 @@
 from app.data_extraction import BizCardExtractor
+from app.db_handler import MongoDBHandler
 
-if __name__ == "__main__":
-    extractor = BizCardExtractor()
-    # Use a raw string to avoid escape character issues in Windows paths
-    data = extractor.extract_all("data_src/1.png")
-    print("\n🔍 Extracted Business Card Info:\n")
-    for key, value in data.items():
-        print(f"{key}: {value}")
-    print("\n✅ Extraction completed successfully!")
-    print("\n📄 Raw Text Extracted:\n")
+extractor = BizCardExtractor(debug=True)
+db = MongoDBHandler()
+
+# Replace with actual image path
+image_path = "data_src\1.png"
+extracted_data = extractor.extract_all(image_path)
+db.insert_data(extracted_data)
+
+print("Data extracted and inserted successfully.")
