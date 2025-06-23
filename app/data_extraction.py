@@ -1,8 +1,10 @@
-# === data_extraction.py ===
 import easyocr
 import re
 from typing import List, Dict
+from PIL import Image
+import numpy as np
 from exception.exceptions import OcrdataException
+
 
 class BizCardExtractor:
     def __init__(self, debug: bool = False):
@@ -17,7 +19,7 @@ class BizCardExtractor:
             return results
         except Exception as e:
             raise OcrdataException(f"Error in OCR extraction: {str(e)}", e)
-
+    
     def clean_text(self, raw_data: List[str]) -> List[str]:
         cleaned = []
         for line in raw_data:
@@ -57,6 +59,7 @@ class BizCardExtractor:
 
         info["mobile_number"] = " / ".join(phones)
 
+        # Basic assumptions for placeholder data extraction
         if lines:
             info["card_holder_name"] = lines[0]
             info["designation"] = lines[1] if len(lines) > 1 else ""
@@ -72,4 +75,3 @@ class BizCardExtractor:
         if self.debug:
             print(f"[DEBUG] Extracted Info: {extracted_fields}")
         return extracted_fields
-

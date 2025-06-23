@@ -1,5 +1,4 @@
 import sys
-import traceback
 
 class OcrdataException(Exception):
     def __init__(self, error_message: str, error_detail: Exception):
